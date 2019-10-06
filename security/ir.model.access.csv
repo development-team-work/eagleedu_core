@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eagleedu_application,access.eagleedu.application,model_eagleedu_application,,1,1,1,1
+access_eagleedu_bddivision,access.eagleedu.bddivision,model_eagleedu_bddivision,,1,1,1,1
+access_eagleedu_bddistrict,access.eagleedu.bddistrict,model_eagleedu_bddistrict,,1,1,1,1
+access_eagleedu_religious,access.eagleedu.religious,model_eagleedu_religious,,1,1,1,1
+access_eagleedu_academicyear,access.eagleedu.academicyear,model_eagleedu_academicyear,,1,1,1,1
