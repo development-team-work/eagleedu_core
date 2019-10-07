@@ -5,3 +5,6 @@ access_eagleedu_bddistrict,access.eagleedu.bddistrict,model_eagleedu_bddistrict,
 access_eagleedu_religious,access.eagleedu.religious,model_eagleedu_religious,,1,1,1,1
 access_eagleedu_academicyear,access.eagleedu.academicyear,model_eagleedu_academicyear,,1,1,1,1
 access_eagleedu_student,access.eagleedu.student,model_eagleedu_student,,1,1,1,1
+access_eagleedu_guardian_relation,access.eagleedu.guardian.relation,model_eagleedu_guardian_relation,,1,1,1,1
+access_eagleedu_standard_class,access.eagleedu.standard_class,model_eagleedu_standard_class,,1,1,1,1
+access_eagleedu_group_division,access.eagleedu.group_division,model_eagleedu_group_division,,1,1,1,1

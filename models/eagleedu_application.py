@@ -119,6 +119,7 @@ class EagleeduApplication(models.Model):
             values = {
                 'name': rec.name,
                 'st_name_b': rec.st_name_b,
+                'st_image': rec.st_image,
                 'application_no': rec.id,
                 'st_father_name': rec.st_father_name,
                 'st_father_name_b': rec.st_father_name_b,
@@ -130,20 +131,20 @@ class EagleeduApplication(models.Model):
                 'date_of_birth': rec.date_of_birth,
                 'st_blood_group': rec.st_blood_group,
                 'nationality': rec.nationality.id,
-                'academic_year': rec.academic_year,
+                'academic_year': rec.academic_year.id,
                 'house_no': rec.house_no,
                 'road_no': rec.road_no,
                 'post_office': rec.post_office,
                 'city': rec.city,
-                'bd_division_id': rec.bd_division_id,
+                'bd_division_id': rec.bd_division_id.id,
                 'country_id': rec.country_id.id,
                 'per_village': rec.per_village,
                 'per_po': rec.per_po,
                 'per_ps': rec.per_ps,
-                'per_dist_id': rec.per_dist_id,
+                'per_dist_id': rec.per_dist_id.id,
                 'per_country_id': rec.per_country_id.id,
                 'guardian_name': rec.guardian_name,
-                'religious_id': rec.religious_id,
+                'religious_id': rec.religious_id.id,
                 # 'is_student': True,
                 'student_id': rec.student_id,
                 'roll_no': rec.roll_no,
@@ -188,3 +189,15 @@ class EagleeduAcademicyear(models.Model):
 class EagleeduOrganization(models.Model):
     _description = 'This the Organization'
     _inherit = 'res.company'
+
+class EagleeduGuardianRelation(models.Model):
+    _name = 'eagleedu.guardian.relation'
+    name = fields.Char()
+
+class EagleeduStandardClass(models.Model):
+    _name = 'eagleedu.standard_class'
+    name = fields.Char()
+
+class EagleeduGroupDivission(models.Model):
+    _name = 'eagleedu.group_division'
+    name = fields.Char()
