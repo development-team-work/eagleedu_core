@@ -5,8 +5,10 @@ from eagle import models, fields, api, _
 class EagleeduApplication(models.Model):
     _name = 'eagleedu.application'
     _description = 'This is Student Application Form'
+    # _order = 'id desc'
+    # _inherit = ['mail.thread']
 
-    registration_no = fields.Char(string='Registration No', required=True, copy=False, readonly=True,
+    application_no = fields.Char(string='Application No.', required=True, copy=False, readonly=True,
                        index=True, default=lambda self: _('New'))
 
     application_date = fields.Datetime('Application Date', default=lambda
@@ -76,8 +78,8 @@ class EagleeduApplication(models.Model):
     @api.model
     def create(self, vals):
         """Overriding the create method and assigning the the sequence for the record"""
-        if vals.get('registration_no', _('New')) == _('New'):
-            vals['registration_no'] = self.env['ir.sequence'].next_by_code('eagleedu.application') or _('New')
+        if vals.get('application_no', _('New')) == _('New'):
+            vals['application_no'] = self.env['ir.sequence'].next_by_code('eagleedu.application') or _('New')
         res = super(EagleeduApplication, self).create(vals)
         return res
 
@@ -85,8 +87,8 @@ class EagleeduApplication(models.Model):
     # @api.model
     # def create(self, vals):
     # #     """Overriding the create method and assigning the the sequence for the record"""
-    #     if vals.get('st_application_id', _('New')) == _('New'):
-    #         vals['st_application_id'] = self.env['ir.sequence'].next_by_code('eagleedu.application') or _('New')
+    #     if vals.get('application_no', _('New')) == _('New'):
+    #         vals['application_no'] = self.env['ir.sequence'].next_by_code('eagleedu.application') or _('New')
     #     res = super(EagleeduApplication, self).create(vals)
     #     return res
 
@@ -117,7 +119,7 @@ class EagleeduApplication(models.Model):
             values = {
                 'name': rec.name,
                 'st_name_b': rec.st_name_b,
-                'st_application_id': rec.id,
+                'application_no': rec.id,
                 'st_father_name': rec.st_father_name,
                 'st_father_name_b': rec.st_father_name_b,
                 'father_mobile': rec.father_mobile,
@@ -145,7 +147,7 @@ class EagleeduApplication(models.Model):
                 # 'is_student': True,
                 'student_id': rec.student_id,
                 'roll_no': rec.roll_no,
-                'st_application_id': rec.st_application_id,
+                'application_no': rec.application_no,
             }
             student = self.env['eagleedu.student'].create(values)
             rec.write({

@@ -5,7 +5,7 @@
             <field name="model">eagleedu.application</field>
             <field name="arch" type="xml">
                 <tree string="Application">
-                    <field name="registration_no"/>
+                    <field name="application_no"/>
                     <field name="name"/>
                     <field name="name"/>
                 </tree>
@@ -42,9 +42,9 @@
                <field name="st_image" widget="image" class="oe_left oe_avatar" />
                <div class="oe_title">
                   <h3>
-                    <label for ='registration_no'/>
-                    <field name="registration_no" attrs="{'invisible': [('registration_no', '!=','')]}"/>
-                    <field name="registration_no" />
+                    <label for ='application_no'/>
+                    <field name="application_no" attrs="{'invisible': [('application_no', '!=','')]}"/>
+                    <field name="application_no" />
                   </h3>
                   <h2>
                       <table>

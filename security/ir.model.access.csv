@@ -4,3 +4,4 @@ access_eagleedu_bddivision,access.eagleedu.bddivision,model_eagleedu_bddivision,
 access_eagleedu_bddistrict,access.eagleedu.bddistrict,model_eagleedu_bddistrict,,1,1,1,1
 access_eagleedu_religious,access.eagleedu.religious,model_eagleedu_religious,,1,1,1,1
 access_eagleedu_academicyear,access.eagleedu.academicyear,model_eagleedu_academicyear,,1,1,1,1
+access_eagleedu_student,access.eagleedu.student,model_eagleedu_student,,1,1,1,1
