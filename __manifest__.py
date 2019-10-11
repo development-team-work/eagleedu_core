@@ -17,6 +17,8 @@ This module for This is a e education manament system
     'data':[
             'views/eagleedu_application.xml',
             'views/eagleedu_student.xml',
+            'views/eagleedu_instructor.xml',
+            'views/eagleedu_class_division.xml',
             'security/ir.model.access.csv',
             'reports/print_reports.xml',
             'reports/report_eagleedu_registration.xml',
