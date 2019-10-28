@@ -25,7 +25,6 @@ class EagleeduStudent(models.Model):
         res = super(EagleeduStudent, self).create(vals)
         return res
 
-
     partner_id = fields.Many2one(
         'res.partner', string='Partner', required=True, ondelete="cascade")
     adm_no = fields.Char(string="Admission Number", readonly=True)

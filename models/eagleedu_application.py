@@ -53,6 +53,7 @@ class EagleeduApplication(models.Model):
     per_po = fields.Char(string='Post Office Name', help="Enter the Post office Name ")
     per_ps = fields.Char(string='Police Station', help="Enter the Police Station Name")
     per_dist_id = fields.Many2one('eagleedu.bddistrict', string='District', help="Enter the City of District name")
+    per_bd_division_id = fields.Many2one('eagleedu.bddivision', string='Division', help="Enter the City of District name")
     per_country_id = fields.Many2one('res.country', string='Country', ondelete='restrict', default=19,
                                      help="Select the Country")
     guardian_name = fields.Char(string="Guardian's Name", help="Proud to say my guardian is")
@@ -92,6 +93,13 @@ class EagleeduApplication(models.Model):
     #     res = super(EagleeduApplication, self).create(vals)
     #     return res
 
+    # @api.multi
+    # def name_get(self):
+    #     res = []
+    #     for rec in self:
+    #         res.append((rec.id,'%-%' % (rec.name, rec.application_no)))
+    #     return res
+
 
     @api.multi
     def send_to_verify(self):
@@ -124,14 +132,19 @@ class EagleeduApplication(models.Model):
                 'st_father_name': rec.st_father_name,
                 'st_father_name_b': rec.st_father_name_b,
                 'father_mobile': rec.father_mobile,
+                'st_father_occupation': rec.st_father_occupation,
                 'st_mother_name': rec.st_mother_name,
                 'st_mother_name_b': rec.st_mother_name_b,
                 'mother_mobile': rec.mother_mobile,
+                'st_mother_occupation': rec.st_mother_occupation,
                 'st_gender': rec.st_gender,
                 'date_of_birth': rec.date_of_birth,
                 'st_blood_group': rec.st_blood_group,
+                'st_passport_no': rec.st_passport_no,
                 'nationality': rec.nationality.id,
                 'academic_year': rec.academic_year.id,
+                'standard_class': rec.standard_class.id,
+                'group_division': rec.group_division.id,
                 'house_no': rec.house_no,
                 'road_no': rec.road_no,
                 'post_office': rec.post_office,
@@ -142,6 +155,7 @@ class EagleeduApplication(models.Model):
                 'per_po': rec.per_po,
                 'per_ps': rec.per_ps,
                 'per_dist_id': rec.per_dist_id.id,
+                'per_bd_division_id': rec.per_bd_division_id.id,
                 'per_country_id': rec.per_country_id.id,
                 'guardian_name': rec.guardian_name,
                 'religious_id': rec.religious_id.id,

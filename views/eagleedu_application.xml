@@ -104,7 +104,7 @@
                     <field name="per_po"/>
                     <field name="per_ps"/>
                     <field name="per_dist_id"/>
-                    <field name="bd_division_id"/>
+                    <field name="per_bd_division_id"/>
                     <field name="country_id"/>
                   </group>
                  </group>
