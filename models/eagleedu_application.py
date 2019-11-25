@@ -37,14 +37,14 @@ class EagleeduApplication(models.Model):
     st_passport_no = fields.Char(string="Passport No.", help="Proud to say my father is", required=False)
     nationality = fields.Many2one('res.country', string='Nationality', ondelete='restrict',default=19,
                                 help="Select the Nationality")
-    academic_year = fields.Many2one('eagleedu.academicyear', string='Academic Year',
+    academic_year_id = fields.Many2one('eagleedu.academic.year', string='Academic Year',
                                        help="Choose Academic year for which the admission is choosing")
 
     house_no = fields.Char(string='House No.', help="Enter the House No.")
     road_no = fields.Char(string='Area/Road No.', help="Enter the Area or Road No.")
     post_office = fields.Char(string='Post Office', help="Enter the Post Office Name")
     city = fields.Char(string='City', help="Enter the City name")
-    bd_division_id = fields.Many2one('eagleedu.bddivision', string= 'Division')
+    bd_division_id = fields.Many2one('eagleedu.bddivision', string= 'State / Division')
     country_id = fields.Many2one('res.country', string='Country', ondelete='restrict',default=19,
                                  help="Select the Country")
     if_same_address = fields.Boolean(string="Permanent Address same as above", default=True,
@@ -53,13 +53,13 @@ class EagleeduApplication(models.Model):
     per_po = fields.Char(string='Post Office Name', help="Enter the Post office Name ")
     per_ps = fields.Char(string='Police Station', help="Enter the Police Station Name")
     per_dist_id = fields.Many2one('eagleedu.bddistrict', string='District', help="Enter the City of District name")
-    per_bd_division_id = fields.Many2one('eagleedu.bddivision', string='Division', help="Enter the City of District name")
+    per_bd_division_id = fields.Many2one('eagleedu.bddivision', string='State / Division', help="Enter the City of District name")
     per_country_id = fields.Many2one('res.country', string='Country', ondelete='restrict', default=19,
                                      help="Select the Country")
     guardian_name = fields.Char(string="Guardian's Name", help="Proud to say my guardian is")
     religious_id = fields.Many2one('eagleedu.religious', string="Religious", help="My Religion is ")
     standard_class = fields.Many2one('eagleedu.standard_class')
-    academic_year = fields.Many2one('eagleedu.academicyear', string='Academic Year')
+    # academic_year = fields.Many2one('eagleedu.academicyear', string='Academic Year')
     group_division = fields.Many2one('eagleedu.group_division')
     student_id=fields.Char('Student Id')
     roll_no = fields.Integer('Roll No')
@@ -195,10 +195,10 @@ class EagleeduReligious(models.Model):
     _description = 'This the Religion'
     name = fields.Char()
 
-class EagleeduAcademicyear(models.Model):
-    _name = 'eagleedu.academicyear'
-    _description = 'This the Academic Year'
-    name = fields.Char()
+# class EagleeduAcademicyear(models.Model):
+#     _name = 'eagleedu.academicyear'
+#     _description = 'This the Academic Year'
+#     name = fields.Char()
 
 class EagleeduOrganization(models.Model):
     _description = 'This the Organization'

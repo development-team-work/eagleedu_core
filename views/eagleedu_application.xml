@@ -68,7 +68,7 @@
                   </group>
 
                   <group string="Academic Information">
-                    <field name="academic_year"/>
+                    <field name="academic_year_id"/>
                     <field name="standard_class" string="Wish to Admit"/>
                     <field name="group_division" string="Group/Division"/>
                   </group>
