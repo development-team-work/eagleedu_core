@@ -35,7 +35,7 @@ class EagleeduStudent(models.Model):
     standard_class = fields.Many2one('eagleedu.standard_class', string="Class Name", help="Enter Class Name")
     class_section = fields.Many2one('eagleedu.class_section', string="Section", help="Enter Class Section Name")
     group_division = fields.Many2one('eagleedu.group_division', string="Group Name", help="Enter Class Section Name")
-    academic_year = fields.Many2one('eagleedu.academicyear', string= "Academic Year", help="Select Academic Year")
+    academic_year = fields.Many2one('eagleedu.academic.year', string= "Academic Year", help="Select Academic Year")
     roll_no = fields.Integer(string="Roll No.", help="Enter Roll No.")
 
     st_name_b = fields.Char(string='Student Bangla Name')

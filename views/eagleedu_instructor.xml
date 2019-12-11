@@ -77,8 +77,7 @@
                         </page>
                         <page string="Contact Details">
                         </page>
-                        <page string="Class History">
-                        </page>
+
                     </notebook>
 
                 </sheet>

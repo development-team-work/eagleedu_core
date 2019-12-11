@@ -11,14 +11,12 @@ This module for This is a e education manament system
     'website': "http://www.eagle-erp.com",
     'support': 'info@eagle-erp.com',
     'category': 'Education',
-    'depends': [
-                'base',
-                ],
+    'depends': [ 'base', ],
     'data':[
             'views/eagleedu_application.xml',
             'views/eagleedu_student.xml',
             'views/eagleedu_instructor.xml',
-            'views/eagleedu_class_division.xml',
+            # 'views/eagleedu_class_division.xml',
             'views/eagleedu_academic_year.xml',
             'security/ir.model.access.csv',
             'reports/print_reports.xml',

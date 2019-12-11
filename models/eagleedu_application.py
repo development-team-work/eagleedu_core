@@ -37,7 +37,7 @@ class EagleeduApplication(models.Model):
     st_passport_no = fields.Char(string="Passport No.", help="Proud to say my father is", required=False)
     nationality = fields.Many2one('res.country', string='Nationality', ondelete='restrict',default=19,
                                 help="Select the Nationality")
-    academic_year_id = fields.Many2one('eagleedu.academic.year', string='Academic Year',
+    academic_year = fields.Many2one('eagleedu.academic.year', string='Academic Year',
                                        help="Choose Academic year for which the admission is choosing")
 
     house_no = fields.Char(string='House No.', help="Enter the House No.")
@@ -59,7 +59,7 @@ class EagleeduApplication(models.Model):
     guardian_name = fields.Char(string="Guardian's Name", help="Proud to say my guardian is")
     religious_id = fields.Many2one('eagleedu.religious', string="Religious", help="My Religion is ")
     standard_class = fields.Many2one('eagleedu.standard_class')
-    # academic_year = fields.Many2one('eagleedu.academicyear', string='Academic Year')
+    academic_year = fields.Many2one('eagleedu.academic.year', string='Academic Year')
     group_division = fields.Many2one('eagleedu.group_division')
     student_id=fields.Char('Student Id')
     roll_no = fields.Integer('Roll No')

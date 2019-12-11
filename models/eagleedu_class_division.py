@@ -10,7 +10,7 @@ class EagleeduClassDivision(models.Model):
     class_division_name = fields.Char(string='Class Division Name')
     instructor_id = fields.Many2one('eagleedu.instructor', string='Instructor Name', help="Class teacher/Faculty")
     instructor_name = fields.Many2one('eagleedu.instructor', 'ins_name', help="Class teacher/Faculty")
-    academicyear = fields.Many2one('eagleedu.academicyear', string='Academic Year',
+    academicyear = fields.Many2one('eagleedu.academic.year', string='Academic Year',
                                        help="Select the Academic Year", required=True)
     standard_class = fields.Many2one('eagleedu.standard_class', string='Class', required=True,
                                help="Select the Class")
@@ -25,11 +25,11 @@ class EagleeduClassDivision(models.Model):
         standard_class = self.env['eagleedu.standard_class'].browse(vals['standard_class'])
         group_division = self.env['eagleedu.group_division'].browse(vals['group_division'])
         class_section = self.env['eagleedu.class_section'].browse(vals['class_section'])
-        batch = self.env['eagleedu.academicyear'].browse(vals['academic_year_id'])
+        batch = self.env['eagleedu.academic.year'].browse(vals['academic_year_id'])
         className=''
         divisionName=''
         sectionName=''
-        batchName=batch.academic_year
+        batchName=batch.academic_year_id
         if standard_class.id>0:
             className=standard_class.name
         if group_division.id>0:

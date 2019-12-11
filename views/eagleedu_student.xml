@@ -36,6 +36,10 @@
             <tree string="Student">
                 <field name="adm_no"/>
                 <field name="name"/>
+                <field name="st_father_name"/>
+                <field name="st_mother_name"/>
+                <field name="standard_class"/>
+                <field name="academic_year"/>
             </tree>
         </field>
     </record>
@@ -121,8 +125,6 @@
                                 <field name="bd_division_id"/>
                                 <field name="country_id"/>
                               </group>
-                        </page>
-                        <page string="Class History">
                         </page>
                     </notebook>
                 </sheet>
