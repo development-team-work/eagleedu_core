@@ -10,7 +10,7 @@ class EagleeduClassDivision(models.Model):
     class_division_name = fields.Char(string='Class Division Name')
     instructor_id = fields.Many2one('eagleedu.instructor', string='Instructor Name', help="Class teacher/Faculty")
     instructor_name = fields.Many2one('eagleedu.instructor', 'ins_name', help="Class teacher/Faculty")
-    academicyear = fields.Many2one('eagleedu.academic.year', string='Academic Year',
+    academic_year = fields.Many2one('eagleedu.academic.year', string='Academic Year',
                                        help="Select the Academic Year", required=True)
     standard_class = fields.Many2one('eagleedu.standard_class', string='Class', required=True,
                                help="Select the Class")
