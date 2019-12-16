@@ -85,20 +85,6 @@ class EagleeduApplication(models.Model):
         return res
 
 
-    # @api.model
-    # def create(self, vals):
-    # #     """Overriding the create method and assigning the the sequence for the record"""
-    #     if vals.get('application_no', _('New')) == _('New'):
-    #         vals['application_no'] = self.env['ir.sequence'].next_by_code('eagleedu.application') or _('New')
-    #     res = super(EagleeduApplication, self).create(vals)
-    #     return res
-
-    # @api.multi
-    # def name_get(self):
-    #     res = []
-    #     for rec in self:
-    #         res.append((rec.id,'%-%' % (rec.name, rec.application_no)))
-    #     return res
 
 
     @api.multi

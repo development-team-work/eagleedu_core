@@ -1,6 +1,6 @@
 <eagle>
 
-        <record id="view_eagleedu_application_tree" model="ir.ui.view">
+    <record id="view_eagleedu_application_tree" model="ir.ui.view">
             <field name="name">eagleedu.application.tree</field>
             <field name="model">eagleedu.application</field>
             <field name="arch" type="xml">
@@ -14,7 +14,6 @@
                 </tree>
             </field>
         </record>
-
 
     <record id="view_eagleedu_application_form" model="ir.ui.view">
         <field name="name">eagleedu.application.form</field>
@@ -125,25 +124,48 @@
         <field name="padding">6</field>
     </record>
 
+        <record id="application_search" model="ir.ui.view">
+        <field name="name">Student Application</field>
+        <field name="model">eagleedu.application</field>
+        <field name="arch" type="xml">
+            <search string="Search Application">
+                <!--<field name="admission_class"/>-->
+                <field name="application_no"/>
+                <field name="st_gender"/>
+                <filter string="New Application" name="new_application" domain="[('state','!=','done')]"/>
+                <filter string="Draft" name="draft_filter" domain="[('state','=','draft')]"/>
+                <filter string="Done" name="active" domain="[('state','=','done')]"/>
+                <group expand='0' string='Group by...'>
+<!--
+                    <filter string='Academic Year' icon="fa-user" domain="[]" context="{'group_by' : 'academic_year'}"/>
+                    <filter string='Gender' icon="fa-genderless" domain="[]" context="{'group_by' : 'st_gender'}"/>
+                    <filter string='Religion' icon="fa-pencil-square-o" domain="[]" context="{'group_by' : 'religious_id'}"/>
+-->
+               </group>
+           </search>
+        </field>
+    </record>
 
 
-        <record id="action_eagleedu_application" model="ir.actions.act_window">
-            <field name="name">Application</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">eagleedu.application</field>
-            <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
-            <field name="context"></field>
-            <field name="help" type="html">
-              <p class="o_view_nocontent_smiling_face">
-                Create a new Application, the first step of a new Application!
-              </p><p>
-                This is the Application form of Student.<br/> You will be able to create an application for the student.
-              </p>
-            </field>
-        </record>
+
+    <record id="action_eagleedu_application" model="ir.actions.act_window">
+        <field name="name">Student Application</field>
+        <field name="res_model">eagleedu.application</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,graph,pivot</field>
+        <field name="search_view_id" ref="application_search"/>
+        <field name="context">{'search_default_new_application': 1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create the your first student application here.
+            </p>
+        </field>
+    </record>
 
     <menuitem id = "eagleedu_menu_root" name = "eEducation" sequence="1" web_icon="eagleedu_core,static/description/icon.png"/>
-    <menuitem id = "eagleedu_menu_application" name = "Application" parent="eagleedu_menu_root" action="action_eagleedu_application"/>
+    <menuitem id="eagleedu_main_menu_admission" name="Admission" parent="eagleedu_menu_root"/>
+    <menuitem id = "eagleedu_menu_application" name = "Application" parent="eagleedu_main_menu_admission" action="action_eagleedu_application"/>
+
 
 </eagle>
