@@ -8,6 +8,11 @@
             <tree string="Instructor">
                 <field name="instructor_id"/>
                 <field name="ins_name"/>
+                <field name="ins_date_of_birth"/>
+                <field name="ins_father_name"/>
+                <field name="ins_mother_name"/>
+                <field name="ins_mobile_no"/>
+                <field name="ins_email"/>
             </tree>
         </field>
     </record>
@@ -47,12 +52,19 @@
                             </group>
                         </page>
                         <page string="Contact Details">
+                            <separator string="instructor Info"/>
+                            <group>
+                                <group>
+                                    <field name="ins_present_address" string="Present Address"/>
+                                    <field name="ins_permanent_address" string="Permanent Address"/>
+                                    <field name="ins_mobile_no" string="Mobile No."/>
+                                    <field name="ins_email" string="Email"/>
+                                </group>
+                            </group>
+
                         </page>
-
                     </notebook>
-
                 </sheet>
-
             </form>
         </field>
     </record>
