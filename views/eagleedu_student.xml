@@ -126,6 +126,24 @@
         <field name="padding">6</field>
     </record>
 
+    <record id="action_eagleedu_student" model="ir.actions.act_window">
+        <field name="name">Student</field>
+        <field name="res_model">eagleedu.student</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+<!--
+        <field name="search_view_id" ref="student_search"/>
+        'search_default_group_class':1
+-->
+        <field name="context">{'create': False}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create the your first student here.
+            </p>
+        </field>
+    </record>
+
 
     <menuitem id="eagleedu_student_submenu" name="Student"
             parent="eagleedu_main_menu_admission" action="action_eagleedu_student"/>
