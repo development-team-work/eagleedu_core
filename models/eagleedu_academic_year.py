@@ -15,6 +15,7 @@ class EagleeduAcademicYear(models.Model):
     _description = 'Academic Year'
     _order = 'sequence asc'
     _rec_name = 'name'
+
     name = fields.Char(string='Year Name', required=True, help='Name of academic year')
     academic_year_code = fields.Char(string='Code', required=True, help='Code of academic year')
     sequence = fields.Integer(string='Sequence', required=True)
