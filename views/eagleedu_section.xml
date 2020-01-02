@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eagle>
+
+    <record id="view_eagleedu_section_tree" model="ir.ui.view">
+        <field name="name">eagleedu.section.tree</field>
+        <field name="model">eagleedu.section</field>
+        <field name="arch" type="xml">
+            <tree string="Section Name">
+                <field name="section_name"/>
+                <field name="section_code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_eagleedu_section_form" model="ir.ui.view">
+        <field name="name">eagleedu.section.form</field>
+        <field name="model">eagleedu.section</field>
+        <field name="arch" type="xml">
+            <form string="Section Name">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="section_name"/>
+                        </group>
+                        <group>
+                            <field name="section_code"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eagleedu_section" model="ir.actions.act_window">
+        <field name="name">Section Name</field>
+        <field name="res_model">eagleedu.section</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p section="oe_view_nocontent_create">
+                Create the your first academic Section of Class here.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="eagleedu_main_menu_conf" name="Configuration" parent="eagleedu_menu_root"/>
+
+    <menuitem id="eagleedu_submenu_section_conf" name="Section" parent="eagleedu_main_menu_conf" sequence="1"/>
+
+    <menuitem action="action_eagleedu_section" parent="eagleedu_submenu_section_conf"
+              id="menu_action_eagleedu_section" name = "Section Name" sequence="30"/>
+
+
+</eagle>
