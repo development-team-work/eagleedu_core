@@ -5,3 +5,5 @@ from . import eagleedu_class_division
 from . import eagleedu_academic_year
 from . import eagleedu_class
 from . import eagleedu_section
+from . import eagleedu_subject
+from . import eagleedu_syllabus
