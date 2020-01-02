@@ -99,6 +99,7 @@
     <menuitem id="eagleedu_main_menu_conf" name="Configuration" parent="eagleedu_menu_root"/>
 
     <menuitem id="eagleedu_submenu_class_conf" name="Class" parent="eagleedu_main_menu_conf" sequence="0"/>
+
     <menuitem action="action_eagleedu_academic_year" parent="eagleedu_submenu_class_conf"
               id="menu_action_eagleedu_academic" name = "Academic Year" sequence="10"/>
 
