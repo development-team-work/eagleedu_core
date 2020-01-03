@@ -6,7 +6,7 @@
         <field name="model">eagleedu.class</field>
         <field name="arch" type="xml">
             <tree string="Standard Class or Level">
-                <field name="class_name"/>
+                <field name="name"/>
                 <field name="roman_name"/>
             </tree>
         </field>
@@ -20,11 +20,9 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="class_name"/>
-                            <field name="roman_name"/>
+                            <field name="name"/>
                         </group>
                         <group>
-                            <field name="class_name"/>
                             <field name="roman_name"/>
                         </group>
                     </group>

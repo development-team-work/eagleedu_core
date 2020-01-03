@@ -6,7 +6,7 @@
         <field name="model">eagleedu.section</field>
         <field name="arch" type="xml">
             <tree string="Section Name">
-                <field name="section_name"/>
+                <field name="name"/>
                 <field name="section_code"/>
             </tree>
         </field>
@@ -20,7 +20,7 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="section_name"/>
+                            <field name="name"/>
                         </group>
                         <group>
                             <field name="section_code"/>
@@ -51,7 +51,7 @@
 -->
 
     <menuitem action="action_eagleedu_section" parent="eagleedu_submenu_class_conf"
-              id="menu_action_eagleedu_section" name = "Section Name" sequence="30"/>
+              id="menu_action_eagleedu_section" name = "Section" sequence="30"/>
 
 
 </eagle>

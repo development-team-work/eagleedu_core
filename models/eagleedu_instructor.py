@@ -15,7 +15,7 @@ class EagleeduInstructor(models.Model):
         res = super(EagleeduInstructor, self).create(vals)
         return res
 
-    ins_name = fields.Char(string="Instructor Name", required=True)
+    name = fields.Char(string="Instructor Name", required=True)
     instructor_id = fields.Char(string="Instructor ID No.", readonly=True )
     ins_father_name = fields.Char(string="Father Name")
     ins_mother_name = fields.Char(string="Mother Name")

@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <tree string="Instructor">
                 <field name="instructor_id"/>
-                <field name="ins_name"/>
+                <field name="name"/>
                 <field name="ins_date_of_birth"/>
                 <field name="ins_father_name"/>
                 <field name="ins_mother_name"/>
@@ -33,7 +33,7 @@
                         <h2>
                             <table>
                                 <tr>
-                                    <td style="padding-right:10px;"><field name="ins_name" placeholder="Name of Instructor" required="1"/></td>
+                                    <td style="padding-right:10px;"><field name="name" placeholder="Name of Instructor" required="1"/></td>
                                 </tr>
                             </table>
                         </h2>
