@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eagle>
 
+<!--
     <record model="ir.ui.view" id="view_eagleedu_class_division_kanban">
         <field name="name">eagleedu.class_division.kanban</field>
         <field name="model">eagleedu.class_division</field>
@@ -39,6 +40,7 @@
             </kanban>
         </field>
     </record>
+-->
 
 
     <record id="view_eagleedu_class_division_tree" model="ir.ui.view">
@@ -47,9 +49,7 @@
         <field name="arch" type="xml">
             <tree string="Class Division">
                 <field name="class_division_name"/>
-                <field name="academicyear"/>
-                <field name="instructor_id"/>
-                <field name="instructor_name"/>
+                <field name="academic_year"/>
             </tree>
         </field>
     </record>
@@ -62,12 +62,14 @@
             <form string="Class Division">
                 <sheet string="Class">
                         <group col="4">
-                            <field name="class_division_name"/>
-                            <field name="academicyear" attrs="{'readonly':[('id','>',0)]}"/>
-                            <field name="instructor_name" string="Intructor Name" attrs="{'readonly':[('id','>',0)]}"/>/>
-                            <field name="standard_class" attrs="{'readonly':[('id','>',0)]}"/>
+                            <field name="name"/>
+                            <field name="academic_year" attrs="{'readonly':[('id','>',0)]}"/>
+                            <field name="instructor_id" string="Intructor Name" attrs="{'readonly':[('id','>',0)]}"/>/>
+                            <field name="class" attrs="{'readonly':[('id','>',0)]}"/>
+<!--
                             <field name="group_division" attrs="{'readonly':[('id','>',0)]}"/>
-                            <field name="class_section" attrs="{'readonly':[('id','>',0)]}"/>
+-->
+                            <field name="section" attrs="{'readonly':[('id','>',0)]}"/>
                         </group>
                 </sheet>
             </form>
@@ -101,10 +103,9 @@
         </field>
     </record>
 
+    <menuitem id="eagleedu_main_menu_conf" name="Configuration" parent="eagleedu_menu_root"/>
 
-<!--
-    <menuitem id="eagleedu_division_menu" name="Class Division"
-            parent="eagleedu_menu_root" action="action_eagleedu_class_division"/>
--->
+    <menuitem action="action_eagleedu_class_division" parent="eagleedu_submenu_class_conf"
+              id="menu_action_eagleedu_class_division" name = "Class Division" sequence="30"/>
 
 </eagle>

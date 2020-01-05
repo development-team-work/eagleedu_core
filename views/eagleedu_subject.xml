@@ -46,10 +46,6 @@
 
     <menuitem id="eagleedu_main_menu_conf" name="Configuration" parent="eagleedu_menu_root"/>
 
-<!-- for submenu
-    <menuitem id="eagleedu_submenu_subject_conf" name="subject" parent="eagleedu_main_menu_conf" sequence="1"/>
--->
-
     <menuitem action="action_eagleedu_subject" parent="eagleedu_submenu_class_conf"
               id="menu_action_eagleedu_subject" name = "Subject" sequence="30"/>
 

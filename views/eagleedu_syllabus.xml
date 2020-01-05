@@ -21,6 +21,9 @@
                         <group>
                             <field name="name"/>
                             <field name="class_id"/>
+                            <field name="academic_year"/>
+                            <field name="subject_id"/>
+
                         </group>
                         <group>
 
@@ -51,3 +54,5 @@
 
 
 </eagle>
+
+
