@@ -10,6 +10,8 @@ class EagleeduClass(models.Model):
     sequence=fields.Integer("Sequence")
     name = fields.Char(string='Class', required=True, help="Enter the Name of the Class")
     class_id = fields.Many2one('eagleedu.class', string='Class', help="Enter the Name of the Class")
+    section_id = fields.Many2one('eagleedu.section', string='Section Name', help="Enter the Name of the Section")
+    groupdivision_id = fields.Many2one('eagleedu.groupdivision', string='Group Division', help="Enter the Name of the Group division")
     roman_name = fields.Char(string='Roman Name ', help="Enter the Code of the Class")
     # section_ids=fields.Many2many('education.class.section',column2='level_ids',column1='section_ids',string='Sections')
     # syllabus_ids = fields.One2many('education.syllabus', 'class_id')

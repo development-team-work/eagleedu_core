@@ -8,6 +8,8 @@
             <tree string="Standard Class or Level">
                 <field name="name"/>
                 <field name="roman_name"/>
+                <field name="section_id" /> <!-- widget="many2many_tags"-->
+                <field name="groupdivision_id"/>
             </tree>
         </field>
     </record>
@@ -24,6 +26,12 @@
                         </group>
                         <group>
                             <field name="roman_name"/>
+                        </group>
+                        <group>
+                            <field name="section_id"/>
+                        </group>
+                        <group>
+                            <field name="groupdivision_id"/>
                         </group>
                     </group>
                 </sheet>

@@ -15,7 +15,7 @@ class EagleeduClassDivision(models.Model):
     standard_class = fields.Many2one('eagleedu.class', string='Standard Class', required=True,
     #                            help="Select the Class")
     # group_division = fields.Many2one('eagleedu.group_division', string='Division', help="Select the Division")
-    # class_section = fields.Many2one('eagleedu.class_section', string='Section', help="Select the Section")
+    class_section = fields.Many2one('eagleedu.section', string='Section', help="Select the Section")
     # # student_id = fields.One2many('eagleedu.student', 'standard_class', string='Students')
     #
     # @api.model

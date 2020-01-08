@@ -21,6 +21,7 @@ This module for This is a e education manament system
             'views/eagleedu_academic_year.xml',
             'views/eagleedu_class.xml',
             'views/eagleedu_section.xml',
+            'views/eagleedu_groupdivision.xml',
             'views/eagleedu_subject.xml',
             'views/eagleedu_syllabus.xml',
             'security/ir.model.access.csv',
