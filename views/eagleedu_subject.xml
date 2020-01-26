@@ -23,6 +23,7 @@
                             <field name="name"/>
                         </group>
                         <group>
+                            <field name="subjects_ids"/>
                             <field name="subject_code"/>
                         </group>
                     </group>

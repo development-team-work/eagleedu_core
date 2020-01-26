@@ -17,6 +17,7 @@ class EagleeduClass(models.Model):
 
     groupdivision_id = fields.Many2one('eagleedu.groupdivision', string='Group Division', help="Enter the Name of the Group division")
     groupdivision_ids = fields.Many2many('eagleedu.groupdivision', string='Groups Divisions', help="Enter the Name of the Group division")
+    subjects_ids = fields.Many2many('eagleedu.subject', string='Subjects Names ', help="Enter the Name of the Group division")
 
     # section_ids=fields.Many2many('education.class.section',column2='level_ids',column1='section_ids',string='Sections')
     # syllabus_ids = fields.One2many('education.syllabus', 'class_id') #

@@ -10,6 +10,7 @@
                 <field name="roman_name"/>
                 <field name="sections_ids" widget="many2many_tags"/>
                 <field name="groupdivision_ids" widget="many2many_tags"/>
+                <field name="subjects_ids" widget="many2many_tags"/>
             </tree>
         </field>
     </record>
@@ -32,6 +33,9 @@
                         </group>
                         <group>
                             <field name="groupdivision_ids"/>
+                        </group>
+                        <group>
+                            <field name="subjects_ids"/>
                         </group>
                     </group>
                 </sheet>
