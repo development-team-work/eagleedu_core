@@ -9,6 +9,9 @@ class EagleeduSection(models.Model):
     _description = "Class Section "
     name = fields.Char(string='Section Name', help="Enter the Name of the Section")
     section_code = fields.Char(string='Section Code', help="Enter the Name of the Section")
+    sections_ids = fields.Many2many('eagleedu.section', 'eagleedu_section_rel', 'sections_ids')
+
+
     # section_ids=fields.Many2many('education.class.section',column2='level_ids',column1='section_ids',string='Sections')
     # syllabus_ids = fields.One2many('education.syllabus', 'class_id')
     # division_ids = fields.Many2many('education.division''class_id', 'class_id')
