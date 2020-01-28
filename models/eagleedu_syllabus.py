@@ -12,7 +12,7 @@ class EagleeduSyllabus(models.Model):
     name = fields.Char(string='Name', help="Enter the Name of the Syllabus")
     # syllabus_code = fields.Char(string='Syllabus Code', compute="_get_code")
     syllabus_display=fields.Char('Syllabus Display',help="This is printed on the marksheet as Subject")
-    class_id = fields.Many2one('eagleedu.class', string='Class ID')
+    standard_class_id = fields.Many2one('eagleedu.standard_class', string='Class ID')
     subject_id = fields.Many2one('eagleedu.subject', string='Subject')
     academic_year = fields.Many2one('eagleedu.academic.year', string='Academic Year')
 

@@ -3,8 +3,8 @@ from . import eagleedu_student
 from . import eagleedu_instructor
 #from . import eagleedu_class_division
 from . import eagleedu_academic_year
-from . import eagleedu_class
-from . import eagleedu_section
-from . import eagleedu_groupdivision
+from . import eagleedu_standard_class
+from . import eagleedu_class_section
+from . import eagleedu_group_division
 from . import eagleedu_subject
 from . import eagleedu_syllabus

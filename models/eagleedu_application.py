@@ -181,23 +181,11 @@ class EagleeduReligious(models.Model):
     _description = 'This the Religion'
     name = fields.Char()
 
-# class EagleeduAcademicyear(models.Model):
-#     _name = 'eagleedu.academicyear'
-#     _description = 'This the Academic Year'
-#     name = fields.Char()
-
 class EagleeduOrganization(models.Model):
     _description = 'This the Organization'
     _inherit = 'res.company'
 
 class EagleeduGuardianRelation(models.Model):
     _name = 'eagleedu.guardian.relation'
-    name = fields.Char()
-
-class EagleeduStandardClass(models.Model):
-    _name = 'eagleedu.standard_class'
-    name = fields.Char()
-
-class EagleeduGroupDivission(models.Model):
-    _name = 'eagleedu.group_division'
+    _description = 'This the Guardian'
     name = fields.Char()

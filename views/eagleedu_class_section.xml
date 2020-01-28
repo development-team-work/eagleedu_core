@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eagle>
 
-    <record id="view_eagleedu_section_tree" model="ir.ui.view">
-        <field name="name">eagleedu.section.tree</field>
-        <field name="model">eagleedu.section</field>
+    <record id="view_eagleedu_class_section_tree" model="ir.ui.view">
+        <field name="name">eagleedu.class_section.tree</field>
+        <field name="model">eagleedu.class_section</field>
         <field name="arch" type="xml">
             <tree string="Section Name">
                 <field name="name"/>
-                <field name="section_code"/>
+                <field name="class_section_code"/>
             </tree>
         </field>
     </record>
 
-    <record id="view_eagleedu_section_form" model="ir.ui.view">
-        <field name="name">eagleedu.section.form</field>
-        <field name="model">eagleedu.section</field>
+    <record id="view_eagleedu_class_section_form" model="ir.ui.view">
+        <field name="name">eagleedu.class_section.form</field>
+        <field name="model">eagleedu.class_section</field>
         <field name="arch" type="xml">
             <form string="Section Name">
                 <sheet>
@@ -23,7 +23,7 @@
                             <field name="name"/>
                         </group>
                         <group>
-                            <field name="section_code"/>
+                            <field name="class_section_code"/>
                         </group>
                     </group>
                 </sheet>
@@ -31,9 +31,9 @@
         </field>
     </record>
 
-    <record id="action_eagleedu_section" model="ir.actions.act_window">
+    <record id="action_eagleedu_class_section" model="ir.actions.act_window">
         <field name="name">Section Name</field>
-        <field name="res_model">eagleedu.section</field>
+        <field name="res_model">eagleedu.class_section</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
@@ -46,8 +46,8 @@
 
     <menuitem id="eagleedu_main_menu_conf" name="Configuration" parent="eagleedu_menu_root"/>
 
-    <menuitem action="action_eagleedu_section" parent="eagleedu_submenu_class_conf"
-              id="menu_action_eagleedu_section" name = "Section" sequence="30"/>
+    <menuitem action="action_eagleedu_class_section" parent="eagleedu_submenu_class_conf"
+              id="menu_action_eagleedu_class_section" name = "Section" sequence="30"/>
 
 
 </eagle>

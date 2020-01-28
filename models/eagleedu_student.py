@@ -33,7 +33,7 @@ class EagleeduStudent(models.Model):
                        index=True, default=lambda self: _('New'))
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
     standard_class = fields.Many2one('eagleedu.standard_class', string="Class Name", help="Enter Class Name")
-    class_section = fields.Many2one('eagleedu.class_section', string="Section", help="Enter Class Section Name")
+    class_section_id = fields.Many2one('eagleedu.class_section', string="Section", help="Enter Class Section Name")
     group_division = fields.Many2one('eagleedu.group_division', string="Group Name", help="Enter Class Section Name")
     academic_year = fields.Many2one('eagleedu.academic.year', string= "Academic Year", help="Select Academic Year")
     roll_no = fields.Integer(string="Roll No.", help="Enter Roll No.")
@@ -76,7 +76,7 @@ class EagleeduStudent(models.Model):
     per_country_id = fields.Many2one('res.country', string='Country', ondelete='restrict', default=19)
 
     guardian_name = fields.Char(string="Guardian's Name", help="Proud to say my guardian is")
-    guardian_relation = fields.Many2one('eagleedu.guardian.relation', string="Guardian's Relation", help="Proud to say my guardian is")
+    # guardian_relation = fields.Many2one('eagleedu.guardian.relation', string="Guardian's Relation", help="Proud to say my guardian is")
     guardian_mobile = fields.Char(string="Guardian's Mobile")
 
     religious_id = fields.Many2one('eagleedu.religious', string="Religious", help="My Religion is ")
@@ -89,6 +89,3 @@ class EagleeduStudent(models.Model):
                                   help="Select the Nationality")
 
 
-class EagleeduClassSection(models.Model):
-    _name = 'eagleedu.class_section'
-    name = fields.Char()
