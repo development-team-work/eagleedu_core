@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eagle>
+
+    <record id="view_eagleedu_registerbook_tree" model="ir.ui.view">
+        <field name="name">eagleedu.registerbook.tree</field>
+        <field name="model">eagleedu.registerbook</field>
+        <field name="arch" type="xml">
+            <tree string="Admission Register Book">
+                <field name="standard"/>
+                <field name="academic_year"/>
+                <field name="start_time"/>
+                <field name="end_time"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_eagleedu_registerbook_form" model="ir.ui.view">
+        <field name="name">eagleedu.registerbook.form</field>
+        <field name="model">eagleedu.registerbook</field>
+        <field name="arch" type="xml">
+            <form string="Admission Register Book">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="standard"/>
+                            <field name="academic_year"/>
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_eagleedu_registerbook" model="ir.actions.act_window">
+        <field name="name">Reister Book</field>
+        <field name="res_model">eagleedu.registerbook</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create the your first student here.
+            </p>
+        </field>
+    </record>
+
+<!--
+    <record id="seq_eagleedu_registerbook" model="ir.sequence">
+        <field name="name">Register Book Seq</field>
+        <field name="res_model">eagleedu.registerbook</field>
+        <field name="code">eagleedu.registerbook</field>
+        <field name="prefix">REGBK</field>
+        <field name="number_increment">1</field>
+        <field name="padding">4</field>
+    </record>
+-->
+
+    <record id="action_eagleedu_registerbook" model="ir.actions.act_window">
+        <field name="name">Register Book</field>
+        <field name="res_model">eagleedu.registerbook</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'create': True}</field>
+
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create the your first student here.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="eagleedu_registerbook_submenu" name="Register Book"
+            parent="eagleedu_main_menu_admission" action="action_eagleedu_registerbook"/>
+
+
+</eagle>

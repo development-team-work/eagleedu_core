@@ -13,6 +13,7 @@ This module for This is a e education manament system
     'category': 'Education',
     'depends': [ 'base', ],
     'data':[
+            'views/eagleedu_registerbook.xml',
             'views/eagleedu_application.xml',
             'views/eagleedu_student.xml',
             'views/eagleedu_instructor.xml',

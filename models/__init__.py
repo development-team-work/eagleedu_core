@@ -8,3 +8,4 @@ from . import eagleedu_class_section
 from . import eagleedu_group_division
 from . import eagleedu_subject
 from . import eagleedu_syllabus
+from . import eagleedu_registerbook
