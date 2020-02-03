@@ -32,8 +32,3 @@ class EagleeduAcademicYear(models.Model):
         vals['sequence'] = self.env['ir.sequence'].next_by_code('eagleedu.academic.year')
         res = super(EagleeduAcademicYear, self).create(vals)
         return res
-
-
-
-
-
