@@ -14,3 +14,4 @@ access_eagleedu_class_section,access.eagleedu.class_section,model_eagleedu_class
 access_eagleedu_subject,access.eagleedu.subject,model_eagleedu_subject,,1,1,1,1
 access_eagleedu_syllabus,access.eagleedu.syllabus,model_eagleedu_syllabus,,1,1,1,1
 access_eagleedu_register,access.eagleedu.register,model_eagleedu_register,,1,1,1,1
+access_eagleedu_class_division,access.eagleedu.class.division,model_eagleedu_class_division,,1,1,1,1
