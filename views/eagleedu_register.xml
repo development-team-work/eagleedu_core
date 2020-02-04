@@ -74,8 +74,10 @@
         </field>
     </record>
 
+    <menuitem id = "eagleedu_menu_root" name = "eEducation" sequence="1" web_icon="eagleedu_core,static/description/icon.png"/>
+    <menuitem id="eagleedu_main_menu_admission" name="Admission" parent="eagleedu_menu_root"/>
 
-    <menuitem id="eagleedu_register_submenu" name="Register" sequence="0"
+    <menuitem id="eagleedu_register_submenu" name="Register"
             parent="eagleedu_main_menu_admission" action="action_eagleedu_register"/>
 
 
