@@ -21,7 +21,9 @@
                     <button name="get_student_list" type="object"
                             string="Get Students" groups="base.group_user"
                             help="Click to get student list" states="draft"/>
-                    <!--<button name="%(eagleedu_core.application_create_student)d" string="Assign Class"-->
+<!--
+                    <button name="%(eagleedu_core.application_create_student)d" string="Assign Class"
+-->
                     <button name='assign_class' string="Assign Class"
                                 type="object" class="oe_highlight"
                                 help="Click to assign class for selected students"
@@ -46,10 +48,10 @@
                              <field name="student_list" attrs="{'readonly': [('state', '=', 'done')]}"
                                     context="{'default_class_id': class_id}">
                                  <tree string="Student List" editable="bottom">
-                                     <field name="stu_id"/>
+<!--                                     <field name="stu_id"/>
                                      <field name="student_id"/>
                                      <field name="roll_no"/>
-                                     <field name="class_id" invisible="True"/>
+                                     <field name="class_id" invisible="True"/>-->
                                  </tree>
                              </field>
                         </page>
