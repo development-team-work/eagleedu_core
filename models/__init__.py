@@ -1,6 +1,6 @@
 from . import eagleedu_application
 from . import eagleedu_student
-from . import eagleedu_student_class
+from . import eagleedu_assign_class
 from . import eagleedu_instructor
 from . import eagleedu_class_division
 from . import eagleedu_academic_year

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eagle>
 
-    <record id="view_eagleedu_student_class_tree" model="ir.ui.view">
-        <field name="name">eagleedu.student.class.tree</field>
-        <field name="model">eagleedu.student.class</field>
+    <record id="view_eagleedu_assign_class_tree" model="ir.ui.view">
+        <field name="name">eagleedu.assign.class.tree</field>
+        <field name="model">eagleedu.assign.class</field>
         <field name="arch" type="xml">
             <tree string="Assign Class">
                 <field name="name"/>
@@ -12,24 +12,24 @@
         </field>
     </record>
 
-    <record id="view_eagleedu_student_class_form" model="ir.ui.view">
-        <field name="name">eagleedu.student.class.form</field>
-        <field name="model">eagleedu.student.class</field>
+    <record id="view_eagleedu_assign_class_form" model="ir.ui.view">
+        <field name="name">eagleedu.assign.class.form</field>
+        <field name="model">eagleedu.assign.class</field>
         <field name="arch" type="xml">
             <form string="Assign Class">
+
                 <header>
                     <button name="get_student_list" type="object"
                             string="Get Students" groups="base.group_user"
                             help="Click to get student list" states="draft"/>
-<!--
-                    <button name="%(eagleedu_core.application_create_student)d" string="Assign Class"
--->
                     <button name='assign_class' string="Assign Class"
                                 type="object" class="oe_highlight"
                                 help="Click to assign class for selected students"
                                 states="draft"/>
                     <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
                 </header>
+
+
                 <sheet string="Assign Students">
                     <group>
                         <group>
@@ -38,7 +38,7 @@
                             <field name="keep_roll_no"/>
                             <field name="admitted_class" attrs="{'readonly': [('state', '=', 'done')] , 'invisible': [('class_id', '=', False)]}"  domain="[('class_id','=',class_id)]"/>
                             <field name="assigned_by" attrs="{'invisible': [('state', '!=', 'done')]}"/>
-                            <!--<field name="admitted_class" attrs="{'invisible': [('admitted_class', '=', False)]}"/>-->
+                            <field name="admitted_class" attrs="{'invisible': [('admitted_class', '=', False)]}"/>
                         </group>
                         <group>
                         </group>
@@ -47,11 +47,8 @@
                         <page string="Student List">
                              <field name="student_list" attrs="{'readonly': [('state', '=', 'done')]}"
                                     context="{'default_class_id': class_id}">
-                                 <tree string="Student List" editable="bottom">
-<!--                                     <field name="stu_id"/>
-                                     <field name="student_id"/>
-                                     <field name="roll_no"/>
-                                     <field name="class_id" invisible="True"/>-->
+                                        <tree string="Student List" editable="bottom">
+                                     <field name="class_id" invisible="True"/>
                                  </tree>
                              </field>
                         </page>
@@ -61,9 +58,9 @@
         </field>
     </record>
 
-    <record id="action_eagleedu_student_class" model="ir.actions.act_window">
+    <record id="action_eagleedu_assign_class" model="ir.actions.act_window">
         <field name="name">Assign Class</field>
-        <field name="res_model">eagleedu.student.class</field>
+        <field name="res_model">eagleedu.assign.class</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
@@ -76,8 +73,8 @@
 
 
 
-     <menuitem id="eagleedu_student_class_submenu" name="Class Assigning"
-            parent="eagleedu_main_menu_admission" action="action_eagleedu_student_class"/>
+     <menuitem id="eagleedu_assign_class_submenu" name="Class Assigning"
+            parent="eagleedu_main_menu_admission" action="action_eagleedu_assign_class"/>
 
 
 </eagle>

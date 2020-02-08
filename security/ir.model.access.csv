@@ -15,3 +15,5 @@ access_eagleedu_subject,access.eagleedu.subject,model_eagleedu_subject,,1,1,1,1
 access_eagleedu_syllabus,access.eagleedu.syllabus,model_eagleedu_syllabus,,1,1,1,1
 access_eagleedu_register,access.eagleedu.register,model_eagleedu_register,,1,1,1,1
 access_eagleedu_class_division,access.eagleedu.class.division,model_eagleedu_class_division,,1,1,1,1
+access_eagleedu_assign_class,access.eagleedu.assign.class,model_eagleedu_assign_class,,1,1,1,1
+access_eagleedu_student_list,access.eagleedu.student.list,model_eagleedu_student_list,,1,1,1,1
