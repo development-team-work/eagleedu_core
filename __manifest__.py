@@ -24,6 +24,7 @@ This module for This is a e education manament system
             'views/eagleedu_standard_class.xml',
             'views/eagleedu_class_section.xml',
             'views/eagleedu_group_division.xml',
+            'views/eagleedu_class_history.xml',
             'views/eagleedu_subject.xml',
             'views/eagleedu_syllabus.xml',
             'security/ir.model.access.csv',

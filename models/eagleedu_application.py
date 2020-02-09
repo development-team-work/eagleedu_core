@@ -11,8 +11,7 @@ class EagleeduApplication(models.Model):
     application_no = fields.Char(string='Application No.', required=True, copy=False, readonly=True,
                        index=True, default=lambda self: _('New'))
 
-    application_date = fields.Datetime('Application Date', default=lambda
-        self: fields.datetime.now())  # , default=fields.Datetime.now, required=True
+    application_date = fields.Datetime('Application Date', default=lambda self: fields.datetime.now())  # , default=fields.Datetime.now, required=True
     name = fields.Char(string='Student Name', required=True, help="Enter Name of Student")
     st_name_b = fields.Char(string='Student Bangla Name')
     st_image = fields.Binary(string='Image', help="Provide the image of the Student")

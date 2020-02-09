@@ -1,6 +1,5 @@
 from eagle import fields, models, api, _
 from eagle.exceptions import ValidationError
-from datetime import date, datetime
 
 class EagleeduAssignClass(models.Model):
     _name = 'eagleedu.assign.class'
@@ -16,8 +15,8 @@ class EagleeduAssignClass(models.Model):
     state = fields.Selection([('draft', 'Draft'), ('done', 'Done')],
                              string='State', required=True, default='draft', track_visibility='onchange')
 
-    assign_date = fields.Datetime(string='Asigned Date', default=datetime.today())
-
+    assign_date = fields.Datetime(string='Asigned Date', default=lambda self: fields.datetime.now())
+#    application_date = fields.Datetime('Application Date', default=lambda self: fields.datetime.today())
 
     @api.multi
     def get_class_assign_name(self):
